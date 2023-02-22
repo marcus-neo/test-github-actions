@@ -15,6 +15,6 @@ jobs:
         if: github.ref == refs/heads/${{ matrix.branchname }}
         uses: actions/checkout@v3
       - name: get ref name ${{ github.ref }}
-        if: ${{ github.ref == matrix.branchname }}
+        if: ${{ github.ref == "refs/heads/"matrix.branchname }}
         uses: actions/checkout@v3
         
