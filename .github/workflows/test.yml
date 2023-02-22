@@ -3,6 +3,7 @@
 on: ["push"]
 jobs:
   testing:
+    if: ${{ github.ref == format('refs/heads/{0}', matrix.branchname) }}
     strategy:
       matrix:
         branchname: ["main"]
