@@ -1,0 +1,12 @@
+## Testing
+
+jobs:
+  testing:
+    strategy:
+      matrix:
+        branchname: ["staging"]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        if: ${{github.ref == 'refs/heads/staging'}}
