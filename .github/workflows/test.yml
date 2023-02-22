@@ -1,5 +1,6 @@
 ## Testing
 
+on: ["push"]
 jobs:
   testing:
     strategy:
