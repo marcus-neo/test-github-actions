@@ -5,16 +5,10 @@ jobs:
   testing:
     strategy:
       matrix:
-        branchname: ["main"]
+        branchname: ["staging"]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-        if: github.ref == refs/heads/${{ matrix.branchname }}
-      - name: get matrix name ${{ matrix.branchname }}
-        if: github.ref == refs/heads/${{ matrix.branchname }}
-        uses: actions/checkout@v3
-      - name: get ref name ${{ github.ref }}
         if: ${{ github.ref == format('refs/heads/{0}', matrix.branchname) }}
-        uses: actions/checkout@v3
         
