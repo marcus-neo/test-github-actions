@@ -5,7 +5,7 @@ jobs:
   testing:
     strategy:
       matrix:
-        branchname: ["staging"]
+        branchname: ["main"]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
